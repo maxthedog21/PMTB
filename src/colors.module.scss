@@ -1,0 +1,102 @@
+/////////////////////////////////
+///  CBS-COLOR CONFIGURATION  ///
+///  Version 1.0              ///
+/////////////////////////////////
+
+// ToDo: Comment which component is using the color.
+
+// Main font colors
+$primary-grey: #3a3b45;
+$secondary-grey: #5a5c69;
+$card-text-grey: #707070;
+$card-title-background: #F8F9FC;
+
+$primary-blue: #33527a;
+$secondary-blue: #112e51;
+
+$primary-black: #000000;
+$secondary-black: #3a3b45;
+
+$primary-white: #ffffff;
+
+$primary: #006599;
+
+$box-shadow: #7d90a5;
+
+// Main tab active and inactive accents etc.
+$active-blue: #006599;
+$active-grey: #5a5c69;
+$inactive-grey: #a7aabd;
+
+$active-radio: #82b1ff;
+
+// Highlight colors
+$highlight-blue: #1976d2;
+$highlight-grey: #eeeeee;
+
+// Border colors
+// top right/left and bottom tab border color
+$tab-all-borders: #dddfeb #dddfeb #fff #dddfeb;
+$tab-single-border: #dddfeb;
+$btn-border: #cbd3e9;
+$chip-bg: rgb(91, 97, 107);
+
+// Body, Welcome banner, Header, Footer bg colors
+$body-bg: rgb(248, 249, 252);
+$welcome-bg: #323a45;
+$footer-bg: #dce4ef;
+$header-bg: #006599;
+
+// Status colors
+$not-started: rgb(255, 198, 179);
+$in-progress: rgb(255, 244, 176);
+$completed: rgb(184, 235, 164);
+
+
+:export {
+  primary-grey: #3a3b45;
+  secondary-grey: #5a5c69;
+  card-text-grey: #707070;
+  card-title-background: #F8F9FC;
+
+  primary-blue: #33527a;
+  secondary-blue: #112e51;
+
+  primary-black: #000000;
+  secondary-black: #3a3b45;
+
+  primary-white: #ffffff;
+
+  primary: #006599;
+
+  box-shadow: #7d90a5;
+
+  // Main tab active and inactive accents etc.
+  active-blue: #006599;
+  active-grey: #5a5c69;
+  inactive-grey: #a7aabd;
+
+  active-radio: #82b1ff;
+
+  // Highlight colors
+  highlight-blue: #1976d2;
+  highlight-grey: #eeeeee;
+
+  // Border colors
+  // top right/left and bottom tab border color
+  tab-all-borders: #dddfeb #dddfeb #fff #dddfeb;
+  tab-single-border: #dddfeb;
+  btn-border: #cbd3e9;
+  chip-bg: rgb(91, 97, 107);
+
+  // Body, Welcome banner, Header, Footer bg colors
+  body-bg: white;
+  welcome-bg: #323a45;
+  footer-bg: #dce4ef;
+  header-bg: #006599;
+
+  // Status colors
+  not-started: rgb(255, 198, 179);
+  in-progress: rgb(255, 244, 176);
+  completed: rgb(184, 235, 164);
+}

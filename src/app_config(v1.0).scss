@@ -1,0 +1,1065 @@
+///////////////////////////////
+///  CBS-APP CONFIGURATION  ///
+///  Version 1.0            ///
+///////////////////////////////
+
+// One SCSS to rule them all !!!
+
+// > Components Covered:
+//   - HeaderBanner.vue
+//   - Header.vue
+//   - HeaderNav.vue
+//   - PageTitle.vue
+//   - Tabs.vue
+//   - Footer.vue
+//   - Buttons.vue
+//   - Table.vue
+
+// ('ctrl+f' and serach for your component file i.e. Header.vue)
+
+//////////////////////////////////////////////////////////////////////////////
+//inputs
+.input-spacing {
+  padding-bottom: 0px;
+  padding-top: 0px;
+}
+//v-card
+//v-card-title
+.new-request-info-title {
+  height: 80px !important;
+  background-color: $card-title-background !important;
+  color: $secondary-blue;
+  font-size: 20px !important;
+  font-weight: bold;
+}
+//v-card-text
+// App Basis
+.v-application {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
+  line-height: 1.8 !important;
+  background-color: $body-bg !important;
+}
+.page-padding {
+  padding: 1.7em 1.8em 3.5em 1.8em;
+}
+.v-data-table-header tr th {
+  height: 35px !important;
+  span {
+    color: #274863 !important;
+    font-size: 16px !important;
+  }
+}
+//
+// Data table styles
+.v-data-table__wrapper {
+  tr.v-data-table__empty-wrapper td {
+    font-size: 16px;
+    font-weight: 700;
+  }
+}
+
+// Data Table pagination dropdown
+.v-input--hide-details > .v-input__control > .v-input__slot {
+  // border: none !important;
+}
+//////////////////////////////////////////////////////////////////////////////
+// HeaderBanner.vue
+
+.cbs-header-banner {
+  background: #323a45;
+  text-align: right;
+  height: 35px;
+  line-height: 35px;
+  padding: 1px 10px 0px 0px;
+
+  p {
+    margin: 0;
+    color: $primary-white;
+    font-size: 17px;
+    font-weight: 400;
+  }
+}
+
+//////////////////////////////////////////////////////////////////////////////
+// Header.vue
+
+.cbs-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  background-color: $primary;
+  height: 105px;
+
+  .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+
+    > img {
+      width: 158px;
+      height: 57px;
+      margin-left: 30px;
+      margin-top: -2px;
+      //margin-top: 23px;
+    }
+  }
+
+  > img:nth-child(2) {
+    width: 27%;
+  }
+}
+
+.content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+
+  .divider {
+    width: 0;
+    border-right: 1px solid #e3e6f0;
+    height: calc(5.2rem - 1rem);
+    margin: auto 1rem;
+    padding-left: 16px;
+  }
+
+  .header-text {
+    -ms-flex-direction: column;
+    box-orient: vertical;
+    box-direction: normal;
+    flex-direction: column;
+    line-height: 1;
+    margin-top: 6px;
+
+    h1,
+    p {
+      color: white;
+    }
+
+    h1 {
+      margin-top: 5px;
+      font-size: 37px;
+      margin-bottom: 0px;
+      font-weight: 400;
+    }
+
+    p {
+      margin-top: 2px;
+      margin-bottom: 10px;
+      font-size: 19px;
+    }
+  }
+}
+
+//////////////////////////////////////////////////////////////////////////////
+// HeaderNav.vue
+
+a.active-nav-item {
+  border-bottom: 5.5px solid #006599;
+  box-shadow: 0 4px 8px 0 rgba(93, 93, 93, 0.2), 0 0px 5px 0 rgba(0, 0, 0, 0.19);
+
+  p {
+    font-weight: 700;
+    color: #5a5c69;
+  }
+}
+.cbs-header-nav {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 0 15px;
+  height: 85px;
+  border: none;
+  background-color: $primary-white;
+  &__left,
+  &__right {
+    height: 85px;
+  }
+
+  &__left {
+    -ms-grid-column: 1;
+    // No B.V fix
+    display: flex;
+  }
+
+  &__right {
+    margin-left: auto;
+    // text-align: right;
+    -ms-grid-column: 2;
+
+    .nav-tab:last-child {
+      width: 165px;
+    }
+
+    .no-outline:focus {
+      outline: 0;
+    }
+  }
+
+  .cbs-header-nav-item {
+    height: 100%;
+    width: 130px;
+    padding-top: 5px;
+    font-size: 14px;
+    border-radius: 3px;
+    text-align: center;
+    border: none;
+    background-color: $primary-white;
+
+    &:hover {
+      box-shadow: 0 4px 8px 0 rgba(93, 93, 93, 0.2),
+        0 6px 5px 0 rgba(0, 0, 0, 0.19);
+      border-bottom: 5.5px solid #006599;
+    }
+
+    img {
+      width: 37px;
+      height: 37px;
+      margin-bottom: 2px;
+      margin-top: 9px;
+    }
+
+    p {
+      color: $secondary-grey;
+      margin-top: -5px !important;
+    }
+  }
+  .cbs-menu {
+    height: 100%;
+    width: 140px;
+    padding-top: 5px;
+    font-size: 14px;
+    border-radius: 3px;
+    text-align: center;
+    border: none;
+    background-color: $primary-white;
+
+    &:hover {
+      box-shadow: 0 4px 8px 0 rgba(93, 93, 93, 0.2),
+        0 6px 5px 0 rgba(0, 0, 0, 0.19);
+      border-bottom: 5.5px solid #006599;
+    }
+
+    img {
+      width: 37px;
+      height: 37px;
+      margin-bottom: 2px;
+      margin-top: 9px;
+    }
+
+    p {
+      color: $secondary-grey;
+      margin-top: -5px !important;
+    }
+  }
+}
+//////////////////////////////////////////////////////////////////////////////
+// PageTitle.vue
+
+.cbs-page-title {
+  font-size: 1.75em;
+  font-weight: 600 !important;
+  margin-bottom: 0.3em;
+  color: $secondary-black;
+}
+
+//////////////////////////////////////////////////////////////////////////////
+// Tabs.vue
+
+.cbs-tabs {
+  .v-tab {
+    background-color: rgb(248, 249, 252);
+    letter-spacing: 0 !important;
+    border-top-left-radius: 0.35rem;
+    border-top-right-radius: 0.35rem;
+    border-bottom: 1px solid #dddfeb;
+    padding: 0em !important;
+
+    p {
+      font-size: 17.5px !important;
+      display: block;
+      width: 100%;
+      margin-top: 16px;
+
+      .v-chip {
+        background-color: transparent;
+
+        height: 25px;
+        vertical-align: baseline;
+        margin-left: 5px !important;
+        padding: 3px 10px 3px 10px !important;
+        .v-chip__content {
+          color: $primary-black;
+        }
+      }
+    }
+
+    &:hover {
+      border: 1px solid;
+      border-color: #dddfeb;
+      color: $primary-white !important;
+
+      p {
+        color: $active-blue;
+      }
+    }
+  }
+  .v-tab:hover {
+    p {
+      .v-chip {
+        background-color: $chip-bg !important;
+
+        height: 25px;
+        vertical-align: baseline;
+        .v-chip__content {
+          color: $primary-white !important;
+        }
+      }
+    }
+  }
+  .v-chip {
+    background-color: $primary-white !important;
+    color: $chip-bg !important;
+    span {
+      font-weight: 700;
+    }
+  }
+}
+
+// Active tab
+.cbs-tab-active {
+  background-color: $primary-white !important;
+  border-right: 7px solid $active-blue !important;
+  border-left: 1px solid;
+  border-top: 1px solid;
+  border-color: #dddfeb;
+  border-bottom: none !important;
+
+  p {
+    font-size: 18px !important;
+    font-weight: 700 !important;
+    color: $secondary-grey !important;
+  }
+
+  .v-chip {
+    background-color: $chip-bg !important;
+    // color: $primary-white !important;
+    .v-chip__content {
+      color: $primary-white !important;
+    }
+  }
+}
+
+//////////////////////////////////////////////////////////////////////////////
+// Footer.vue
+
+.cbs-footer {
+  background-color: $footer-bg !important;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 4fr;
+  grid-template-columns: 1fr 4fr;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0.55em 0 !important;
+
+  .footer-img {
+    -ms-grid-column: 1;
+    grid-column: 1;
+    padding-top: 0.5em;
+    padding-left: 0.2em;
+    padding-bottom: 0.1em;
+
+    img {
+      width: 120px;
+      height: 50px;
+      margin-left: 45px;
+      margin-bottom: 5px;
+    }
+  }
+
+  .footer-links {
+    -ms-grid-column: 2;
+    grid-column: 2;
+    font-size: 0.85em;
+    width: 75%;
+    text-align: center;
+    letter-spacing: 0.6pt;
+    padding-left: 30px;
+
+    a {
+      letter-spacing: 0px;
+      text-decoration: none;
+      color: $primary-black;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    .footer-version {
+      font-size: 10px;
+      padding-left: 10px;
+      color: $secondary-grey;
+      letter-spacing: 0.4pt;
+    }
+  }
+}
+
+//////////////////////////////////////////////////////////////////////////////
+// Buttons.vue
+
+@mixin btn-size($btn-hieght, $btn-width) {
+  height: $btn-hieght !important;
+  width: $btn-width;
+}
+
+@mixin btn-img__opacity {
+  .image_light {
+    opacity: 0;
+  }
+
+  .image_dark {
+    opacity: 1;
+  }
+}
+
+@mixin btn-img__hover {
+  -webkit-box-shadow: 0 0 0 #4d637c;
+  box-shadow: 0 0 0 #4d637c !important;
+  background-color: $secondary-blue !important;
+
+  span {
+    color: #fff;
+  }
+
+  .image_light {
+    opacity: 1;
+  }
+
+  .image_dark {
+    opacity: 0;
+  }
+}
+//-------
+.btn-primary {
+  float: right !important;
+  box-shadow: 0px 2.5px 2px #7d90a5 !important;
+  padding: 0 20px 0 20px !important;
+  height: 45px !important;
+  background-color: $primary-white !important;
+
+  img {
+    width: 18px;
+    height: 18px;
+    margin-left: -10px;
+    margin-top: 0px;
+    margin-right: 0px;
+  }
+
+  @include btn-img__opacity;
+
+  span {
+    padding-left: 8px;
+    margin-right: -5px;
+    font-size: 15px;
+    color: $secondary-blue;
+    text-transform: none;
+    letter-spacing: 0;
+  }
+
+  &:hover {
+    @include btn-img__hover;
+  }
+}
+.btn-action {
+  margin-bottom: -9px !important;
+  box-shadow: 0px 2.5px 2px #7d90a5 !important;
+  background-color: white !important;
+  height: 32px !important;
+  padding: 0 27px 0 27px !important;
+
+  img {
+    width: 18px;
+    height: 18px;
+    margin-left: -20px;
+    margin-top: 1px;
+    margin-right: 3px;
+  }
+
+  @include btn-img__opacity;
+
+  span {
+    color: $secondary-blue;
+    margin-right: -10px;
+    letter-spacing: 0px;
+  }
+
+  &:hover {
+    @include btn-img__hover;
+  }
+}
+.active-btn {
+  -webkit-box-shadow: 0 0 0 #4d637c;
+  box-shadow: 0 0 0 #4d637c;
+  background-color: #112e51 !important;
+
+  span {
+    color: #fff;
+  }
+
+  .image_light {
+    opacity: 1;
+  }
+
+  .image_dark {
+    opacity: 0;
+  }
+}
+
+//////////////////////////////////////////////////////////////////////////////
+// Table.vue
+
+.cbs-tabs-table {
+  .v-data-table {
+    border: 1px solid #dddfeb;
+    border-top: none;
+    tbody tr:nth-of-type(odd) {
+      background-color: #f5f6fa;
+    }
+    td {
+      font-size: 16px !important;
+      padding: 3px 17px 9px 17px !important;
+    }
+    tr:first-child td {
+      padding: 4px 17px 4px 17px !important;
+    }
+    tr:hover {
+      cursor: pointer;
+      td {
+        font-weight: 700 !important;
+      }
+    }
+  }
+
+  .v-data-table-header tr th {
+    padding: 25px 16px 10px !important;
+    border: none !important;
+
+    span {
+      color: black !important;
+      font-size: 16px !important;
+    }
+  }
+}
+.action__col {
+  display: block;
+}
+
+// Search bar
+.table-search-bar {
+  background-color: #f5f6fa;
+  border-bottom: 0.5px solid #c2c2c2 !important;
+}
+
+.search-spacing {
+  padding: 2px 5px !important;
+  margin-right: -5px;
+}
+
+.search-field {
+  font-size: 16px !important;
+  font-weight: 400;
+  margin: 7px 0px 7px 0;
+  border: 0px solid #e0e0e0;
+  .v-text-field__slot label {
+    color: #adb0c2 !important;
+    font-size: 16px;
+  }
+}
+
+// Table Global Footer
+.v-application--is-ltr {
+  .v-select__selections {
+    padding: 0px;
+  }
+
+  .v-data-footer__select {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 1 1;
+    flex: 1 1 1 1;
+    font-size: 13px;
+    font-weight: 400;
+    color: #5a5c69;
+
+    .v-input {
+      margin-right: 0px !important;
+    }
+
+    .v-input__slot {
+      width: 48px !important;
+    }
+
+    .v-select {
+      -ms-flex-preferred-size: 45px !important;
+      flex-basis: 45px !important;
+      /* set minimum width of select menu */
+      margin-left: 10px !important;
+    }
+
+    .v-select__selections .v-select__selection--comma {
+      font-size: 13px;
+      font-weight: 400;
+      color: #5a5c69;
+      margin: 0;
+      padding: 0;
+      width: 29px !important;
+    }
+  }
+
+  .v-data-footer__pagination {
+    font-size: 13px;
+    font-weight: 400;
+    color: #5a5c69;
+    margin-left: -20px !important;
+    margin-right: 0 !important;
+    padding-left: 15px;
+    padding-right: 5px;
+  }
+}
+
+.v-data-footer__icons-before,
+.v-data-footer__icons-after {
+  button {
+    margin: 1px !important;
+
+    &:hover {
+      border-radius: 15px !important;
+      background-color: #5b616b !important;
+
+      .v-icon {
+        color: white !important;
+      }
+    }
+  }
+}
+
+//Global classes used by transportation
+//cbs-tabs
+//cbs-tabs-table
+//cbs-page-title
+//btn-action
+
+/* Styling for card elements */
+
+.v-card {
+  &__shadow {
+    -webkit-box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15) !important;
+    box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15) !important;
+  }
+
+  &__title {
+    padding: 10px !important;
+    background-color: #f7f7f7;
+  }
+
+  &__title-text {
+    color: #274863;
+    font-size: 18px;
+    padding-left: 8px;
+  }
+}
+
+/* Input */
+.dialog__input .v-input__slot {
+  border: 1px solid #d1d3e2 !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+.label {
+  color: black;
+  font-weight: 600;
+}
+
+//MyPermits.vue
+.permit-data {
+  font-size: 18px;
+}
+
+.permit-card-button {
+  box-shadow: 0px 2px 2px #7d90a5 !important;
+  height: 45px;
+  width: 165px;
+  margin: 0px 20px 20px 0px;
+  padding: 0px 5px 0px 2px !important;
+  background-color: $primary-white !important;
+
+  span {
+    letter-spacing: 0 !important;
+    color: $secondary-blue;
+    margin-right: -10px;
+    font-size: 15px;
+  }
+  &:hover {
+    -webkit-box-shadow: 0 0 0 #4d637c;
+    box-shadow: 0 0 0 #4d637c !important;
+    background-color: $secondary-blue !important;
+
+    span {
+      color: #fff;
+    }
+
+    .image_light {
+      opacity: 1;
+    }
+
+    .image_dark {
+      opacity: 0;
+    }
+  }
+}
+
+//ActivePermits.vue
+.new-request-button {
+  box-shadow: 0px 2px 2px #7d90a5 !important;
+  height: 45px;
+  width: 165px;
+
+  padding: 0px 5px 0px 10px !important;
+  background-color: $primary-white !important;
+
+  img {
+    width: 18px;
+    height: 18px;
+    margin-left: -20px;
+    margin-top: 0px;
+    margin-right: 3px;
+  }
+  .image_light {
+    opacity: 0;
+  }
+
+  .image_dark {
+    opacity: 1;
+  }
+
+  span {
+    letter-spacing: 0 !important;
+    color: $secondary-blue;
+    margin-right: -10px;
+    font-size: 15px;
+  }
+
+  &:hover {
+    -webkit-box-shadow: 0 0 0 #4d637c;
+    box-shadow: 0 0 0 #4d637c !important;
+    background-color: $secondary-blue !important;
+
+    span {
+      color: #fff;
+    }
+
+    .image_light {
+      opacity: 1;
+    }
+
+    .image_dark {
+      opacity: 0;
+    }
+  }
+}
+
+.search-bg {
+  background-color: #f5f6fa;
+}
+
+//Reports.vue
+.generate-report-btn {
+  box-shadow: 0px 2px 2px #7d90a5 !important;
+  height: 45px;
+  width: 165px;
+
+  padding: 0px 5px 0px 2px !important;
+  background-color: $primary-white !important;
+
+  img {
+    width: 18px;
+    height: 18px;
+    margin-left: -20px;
+    margin-top: 0px;
+    margin-right: 3px;
+  }
+  .image_light {
+    opacity: 0;
+  }
+
+  .image_dark {
+    opacity: 1;
+  }
+
+  span {
+    letter-spacing: 0 !important;
+    color: $secondary-blue;
+    margin-right: -10px;
+    font-size: 15px;
+  }
+
+  &:hover {
+    -webkit-box-shadow: 0 0 0 #4d637c;
+    box-shadow: 0 0 0 #4d637c !important;
+    background-color: $secondary-blue !important;
+
+    span {
+      color: #fff;
+    }
+
+    .image_light {
+      opacity: 1;
+    }
+
+    .image_dark {
+      opacity: 0;
+    }
+  }
+}
+
+.download-btn {
+  box-shadow: 0px 2px 2px #7d90a5 !important;
+  height: 55px !important;
+  width: 165px;
+
+  padding: 0px 5px 0px 2px !important;
+  background-color: $primary-white !important;
+
+  img {
+    width: 18px;
+    height: 18px;
+    margin-left: -20px;
+    margin-top: 0px;
+    margin-right: 3px;
+  }
+  .image_light {
+    opacity: 0;
+  }
+
+  .image_dark {
+    opacity: 1;
+  }
+
+  span {
+    letter-spacing: 0 !important;
+    color: $secondary-blue;
+    margin-right: -10px;
+    font-size: 15px;
+  }
+}
+
+.results {
+  padding: 30px 20px 20px 20px;
+}
+
+.results-text {
+  font-size: 18px;
+
+  img {
+    width: 20px;
+    height: 20px;
+    margin-top: 0px;
+    margin-right: 3px;
+  }
+}
+//ReplacePermit.vue RenewPermit.vue
+.permit-modal-text {
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.permit-modal-row-spacing {
+  margin: 10px 0px 0px 0px;
+}
+
+.advanced-search-btn {
+  box-shadow: 0px 2px 2px #7d90a5 !important;
+  height: 45px;
+  width: 165px;
+  margin: 0px 20px 15px 0px;
+  padding: 0px 5px 0px 2px !important;
+  background-color: $primary-white !important;
+
+  img {
+    width: 18px;
+    height: 18px;
+    margin-left: -20px;
+    margin-top: 0px;
+    margin-right: 3px;
+  }
+  .image_light {
+    opacity: 0;
+  }
+
+  .image_dark {
+    opacity: 1;
+  }
+
+  span {
+    letter-spacing: 0 !important;
+    color: $secondary-blue;
+    margin-right: -10px;
+    font-size: 15px;
+  }
+
+  &:hover {
+    -webkit-box-shadow: 0 0 0 #4d637c;
+    box-shadow: 0 0 0 #4d637c !important;
+    background-color: $secondary-blue !important;
+
+    span {
+      color: #fff;
+    }
+
+    .image_light {
+      opacity: 1;
+    }
+
+    .image_dark {
+      opacity: 0;
+    }
+  }
+}
+
+.permit-btn {
+  box-shadow: 0px 2px 2px #7d90a5 !important;
+  height: 45px;
+  width: 165px;
+  margin: 0px 20px 15px 0px;
+  padding: 0px 20px 0px 2px !important;
+  background-color: $primary-white !important;
+
+  img {
+    width: 18px;
+    height: 18px;
+    margin-left: -20px;
+    margin-top: 0px;
+    margin-right: 3px;
+  }
+  .image_light {
+    opacity: 0;
+  }
+
+  .image_dark {
+    opacity: 1;
+  }
+
+  span {
+    letter-spacing: 0 !important;
+    color: $secondary-blue;
+    margin-right: -10px;
+    font-size: 15px;
+  }
+
+  &:hover {
+    -webkit-box-shadow: 0 0 0 #4d637c;
+    box-shadow: 0 0 0 #4d637c !important;
+    background-color: $secondary-blue !important;
+
+    span {
+      color: #fff;
+    }
+
+    .image_light {
+      opacity: 1;
+    }
+
+    .image_dark {
+      opacity: 0;
+    }
+  }
+}
+
+.advanced-search-dialog {
+  // padding: 15px 10px 15px 10px;
+  // All text fields
+  .v-input__control > .v-input__slot {
+    border: 1px solid #d1d3e2;
+    box-shadow: none !important;
+  }
+
+  .header {
+    background-color: white;
+
+    .header__title--font {
+      padding-left: 7px;
+      font-size: 24px;
+      font-weight: 400;
+      letter-spacing: 0;
+    }
+
+    &__close-btn {
+      background-color: transparent !important;
+      border: 0;
+      box-shadow: 0px 0px rgba(0, 0, 0, 0);
+
+      span {
+        color: gray;
+      }
+    }
+
+    &__close-btn:hover {
+      span {
+        color: black;
+      }
+    }
+  }
+}
+
+.select {
+  margin-bottom: 0px !important;
+}
+
+//Advanced Search Dialog
+.cancel-btn {
+  box-shadow: 0px 2px 2px #7d90a5 !important;
+  text-transform: none;
+  height: 45px;
+  width: 165px;
+  margin: 0px 20px 15px 0px;
+  padding: 0px 5px 0px 2px !important;
+  color: $primary-white !important;
+  background-color: #86899a !important;
+}
+
+.find-btn {
+  box-shadow: 0px 2px 2px #7d90a5 !important;
+  text-transform: none;
+  height: 45px;
+  width: 165px;
+  margin: 10px 20px 15px 0px;
+  padding: 0px 5px 0px 2px !important;
+  color: $primary-white !important;
+  background-color: #3785b3 !important;
+}
+
+.results {
+  padding: 30px 20px 20px 20px;
+  font-weight: 500;
+  background-color: #f5faff;
+}
+
+.results-table {
+  th {
+    height: 10px;
+  }
+  cursor: pointer;
+}
