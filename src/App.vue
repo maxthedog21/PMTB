@@ -225,14 +225,19 @@
               right: 2%;
               bottom: 2%;
               color: white;
-              width: 135px;
-              height: 45px;
+              width: 220px;
+              height: 55px;
               font-size: 16px;
               text-transform: none;
               letter-spacing: 0px;
             "
           >
             Download
+            <PMAutocomplete
+              style="margin-top: 5px; margin-left: 10px"
+              :items="['Vue2', 'Vue3']"
+              :label="''"
+            ></PMAutocomplete>
             <img
               src="./assets/images/download.png"
               style="
