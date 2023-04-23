@@ -14,17 +14,52 @@
           <v-card style="height: 100%">
             <v-tabs v-model="tab" fixed-tabs color="black" class="pm-tabs">
               <!-- Tab1 -->
-              <v-tab value="one"
-                ><span style="text-transform: none">Base</span></v-tab
-              >
+              <v-tab value="one">
+                <div style="display: flex; align-items: center">
+                  <span style="text-transform: none"
+                    >Base
+                    <img
+                      src="./assets/images/base.png"
+                      style="
+                        margin-right: 10px;
+                        height: 18px;
+                        margin-bottom: -4px;
+                      "
+                  /></span>
+                </div>
+              </v-tab>
               <!-- Tab2 -->
-              <v-tab value="two"
-                ><span style="text-transform: none">Components</span></v-tab
-              >
+              <v-tab value="two">
+                <div style="display: flex; align-items: center">
+                  <span style="text-transform: none"
+                    >Features
+                    <img
+                      src="./assets/images/components.png"
+                      style="
+                        margin-right: 10px;
+                        height: 24px;
+                        margin-bottom: -7px;
+                        margin-top: -5px;
+                      "
+                  /></span>
+                </div>
+              </v-tab>
               <!-- Tab3 -->
-              <v-tab value="two"
-                ><span style="text-transform: none">Code</span></v-tab
-              >
+              <v-tab value="three">
+                <div style="display: flex; align-items: center">
+                  <span style="text-transform: none"
+                    >Code
+                    <img
+                      src="./assets/images/code.png"
+                      style="
+                        margin-right: 10px;
+                        height: 24px;
+                        margin-bottom: -7px;
+                        margin-top: -5px;
+                      "
+                  /></span>
+                </div>
+              </v-tab>
             </v-tabs>
             <v-card-text>
               <v-window v-model="tab">
@@ -163,7 +198,16 @@
                   </v-row>
                 </v-window-item>
                 <!-- Tab2: Components -->
-                <v-window-item value="two"> </v-window-item>
+                <v-window-item value="two">
+                  <v-row class="pt-6">
+                    <v-col class="clearCSS pt-0 pb-0" cols="8" md="8">
+                      <PMAutocomplete
+                        :items="['CBS', 'FBI', 'New Sheet']"
+                        :label="'Application Theme'"
+                      ></PMAutocomplete>
+                    </v-col>
+                  </v-row>
+                </v-window-item>
                 <!-- Tab3: Code -->
                 <v-window-item value="three"> </v-window-item>
               </v-window>
@@ -175,20 +219,29 @@
         <v-col cols>
           <PMHeader title="title" role="role" subTitle="subTitle" />
           <v-btn
-            color="#1867C0"
+            color="#212121"
             style="
               position: fixed;
               right: 2%;
               bottom: 2%;
               color: white;
-              width: 130px;
-              height: 4%;
+              width: 135px;
+              height: 45px;
               font-size: 16px;
               text-transform: none;
               letter-spacing: 0px;
             "
           >
             Download
+            <img
+              src="./assets/images/download.png"
+              style="
+                margin-left: 5px;
+                height: 21px;
+                margin-bottom: -6px;
+                margin-top: -5px;
+              "
+            />
           </v-btn>
         </v-col>
       </v-row>

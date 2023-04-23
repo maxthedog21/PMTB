@@ -9,6 +9,7 @@
       density="compact"
       variant="outlined"
       hide-details=""
+      placeholder=""
       color="#1976d2"
       class="field"
       :style="newStyle"
@@ -29,7 +30,7 @@ export default {
       required: true,
     },
     placeholder: {
-      required: true,
+      required: false,
     },
     label: {
       required: true,
